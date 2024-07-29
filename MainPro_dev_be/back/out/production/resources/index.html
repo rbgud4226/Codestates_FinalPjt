@@ -1,0 +1,85 @@
+<script th:inline="javascript" xmlns:th="http://www.w3.org/1999/xhtml">
+    var stompClient = null;
+    var roomId = [[${roomId}]];
+    var chatList = [[${chatList}]];
+
+    function setConnected(connected){
+        $("#connect").prop("disabled", connected);
+        $("#disconnect").prop("disabled", !connected);
+        if(connected){
+            $("#conversation").show();
+        }
+        else{
+            $("#conversation").hide();
+        }
+        $("chatting").html("");
+    }
+
+    function connect(){
+        var socket = new SockJS('/ws-stomp'); // config 설정에서 sockjs 연결 주소
+        stompClient = Stomp.over(socket);
+        stompClient.connect({}, function (frame){
+            setConnected(true);
+            console.log('Connected: ' + frame);
+            loadChat(chatList) // 저장된 채팅 불러오기
+
+            // room/{roomId}를 구독
+            stompClient.subscribe('/room/'+roomId, function (chatMessage){
+                showChat(Json.parse(chatMessage.body));
+            });
+        });
+    }
+
+    function disconnect(){
+        if(stompClient !== null){
+            stompClient.disconnect();
+        }
+        setConnected(false);
+        console.log("Disconnected");
+    }
+
+    //html 에서 입력값, roomId 를 받아서 Controller 로 전달
+    function sendChat(){
+        stompClient.send("/send/"+roomId, {},
+            JSON.stringify({
+                'sender' : $("#sender").val(),
+                'message' : $("#message").val()
+            }));
+    }
+
+    //저장된 채팅 불러오기
+    function loadChat(chatList){
+        if(chatList != null){
+            for(chat in chatList){
+                $("#chatting").append(
+                    "<tr><td>" + "[" + chatList[chat].sender + "]" + chatList[chat].message + "</td></tr>"
+                );
+            }
+        }
+    }
+
+    //보낸 채팅 보기
+    function showChat(chatMessage){
+        $("#chatting").append(
+            "<tr><td>" + "[" + chatMessage.sender() + "]" + chatMessage.message + "</td></tr>"
+        );
+    }
+
+    $(function(){
+        $("form").on('submit', function(e){
+            e.preventDefault();
+        });
+        $("#connect").click(function() {connect();});
+        $("#disconnect").click(function() {disconnect();});
+        $("#send").click(function(){sendChat();});
+    })
+</script>
+<script>
+    //창 키면 바로 연결
+    window.onload = function (){
+        connect();
+    }
+    window.BeforeUnloadEvent = function(){
+        disconnect();
+    }
+</script>

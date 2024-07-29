@@ -1,0 +1,89 @@
+package com.pettalk.petsitter.mapper;
+
+import com.pettalk.petsitter.dto.PetSitterDto;
+import com.pettalk.petsitter.entity.PetSitter;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2023-10-17T03:22:19+0900",
+    comments = "version: 1.5.2.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.2.1.jar, environment: Java 11.0.14.1 (Azul Systems, Inc.)"
+)
+@Component
+public class PetSitterMapperImpl implements PetSitterMapper {
+
+    @Override
+    public PetSitter postToPetSitter(PetSitterDto.PostDto postDto) {
+        if ( postDto == null ) {
+            return null;
+        }
+
+        PetSitter petSitter = new PetSitter();
+
+        petSitter.setPetSitterId( postDto.getPetSitterId() );
+        petSitter.setName( postDto.getName() );
+        petSitter.setIntroduce( postDto.getIntroduce() );
+        petSitter.setNowJob( postDto.getNowJob() );
+        petSitter.setSmoking( postDto.isSmoking() );
+        petSitter.setInfo( postDto.getInfo() );
+        List<String> list = postDto.getExAnimal();
+        if ( list != null ) {
+            petSitter.setExAnimal( new ArrayList<String>( list ) );
+        }
+        petSitter.setCreatedAt( postDto.getCreatedAt() );
+
+        return petSitter;
+    }
+
+    @Override
+    public PetSitter patchToPetSitter(PetSitterDto.PatchDto patchDto) {
+        if ( patchDto == null ) {
+            return null;
+        }
+
+        PetSitter petSitter = new PetSitter();
+
+        petSitter.setPetSitterId( patchDto.getPetSitterId() );
+        petSitter.setName( patchDto.getName() );
+        petSitter.setPetSitterImage( patchDto.getPetSitterImage() );
+        petSitter.setIntroduce( patchDto.getIntroduce() );
+        petSitter.setNowJob( patchDto.getNowJob() );
+        petSitter.setSmoking( patchDto.isSmoking() );
+        petSitter.setInfo( patchDto.getInfo() );
+        List<String> list = patchDto.getExAnimal();
+        if ( list != null ) {
+            petSitter.setExAnimal( new ArrayList<String>( list ) );
+        }
+
+        return petSitter;
+    }
+
+    @Override
+    public PetSitterDto.ResponseDto petSitterToResponse(PetSitter petSitter) {
+        if ( petSitter == null ) {
+            return null;
+        }
+
+        PetSitterDto.ResponseDto responseDto = new PetSitterDto.ResponseDto();
+
+        if ( petSitter.getPetSitterId() != null ) {
+            responseDto.setPetSitterId( petSitter.getPetSitterId() );
+        }
+        responseDto.setName( petSitter.getName() );
+        responseDto.setPetSitterImage( petSitter.getPetSitterImage() );
+        responseDto.setIntroduce( petSitter.getIntroduce() );
+        responseDto.setNowJob( petSitter.getNowJob() );
+        responseDto.setSmoking( petSitter.isSmoking() );
+        List<String> list = petSitter.getExAnimal();
+        if ( list != null ) {
+            responseDto.setExAnimal( new ArrayList<String>( list ) );
+        }
+        responseDto.setInfo( petSitter.getInfo() );
+        responseDto.setCreatedAt( petSitter.getCreatedAt() );
+
+        return responseDto;
+    }
+}

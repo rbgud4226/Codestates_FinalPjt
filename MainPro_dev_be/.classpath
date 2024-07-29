@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="back/build/generated/sources/annotationProcessor/java/main"/>
+	<classpathentry kind="src" path="back/src/main/generated"/>
+	<classpathentry excluding="com/pettalk/oauth/|com/pettalk/member/repository/" kind="src" path="back/src/main/java"/>
+	<classpathentry kind="src" path="back/src/main/java/com/pettalk/member/repository"/>
+	<classpathentry kind="src" path="back/src/main/java/com/pettalk/oauth"/>
+	<classpathentry kind="src" path="back/src/test/java"/>
+	<classpathentry kind="lib" path="back/build/libs/pettalk-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="back/build/libs/pettalk-0.0.1-SNAPSHOT-plain.jar"/>
+	<classpathentry kind="lib" path="back/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path="back/build/classes/java/main"/>
+</classpath>

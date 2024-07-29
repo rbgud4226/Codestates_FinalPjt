@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${MYSQL_SERVER_URL}
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  redis:
+    host: 3.35.193.208
+    port: 6397
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            client_id: ${KAKAO_ID}
+            client_secret: ${KAKAO_SECRET}
+            authorization-grant-type: authorization_code
+            redirect_uri: ${KAKAO_SERVER_URI}
+            client-name: Kakao
+        provider:
+          kakao:
+            authorization-uri: https://kauth.kakao.com/oauth/authorize
+            token-uri: https://kauth.kakao.com/oauth/token
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user-name-attribute: id
+jwt:
+  key: ${JWT_KEY}
+  access-token-expiration-minutes: 60
+  refresh-token-expiration-minutes: 420
+coolsms:
+  api:
+    key: ${COOLSMS_KEY}
+    secret: ${COOLSMS_SECRET}

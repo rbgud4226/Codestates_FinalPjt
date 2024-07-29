@@ -1,0 +1,58 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:test
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  redis:
+    host: localhost
+    port: 6397
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            client_id: ${KAKAO_ID}
+            client_secret: ${KAKAO_SECRET}
+            authorization-grant-type: authorization_code
+            redirect_uri: ${KAKAO_LOCAL_URI}
+            client-name: Kakao
+          google:
+            client_id: ${GOOGLE_ID}
+            client_secret: ${GOOGLE_SECRET}
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/oauth/google
+            client-name: Google
+        provider:
+          kakao:
+            authorization-uri: https://kauth.kakao.com/oauth/authorize
+            token-uri: https://kauth.kakao.com/oauth/token
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user-name-attribute: id
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/v2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://openidconnect.googleapis.com/v1/userinfo
+            user-name-attribute: id
+jwt:
+  key: ${JWT_KEY}
+  access-token-expiration-minutes: 100
+  refresh-token-expiration-minutes: 420
+coolsms:
+  api:
+    key: ${COOLSMS_KEY}
+    secret: ${COOLSMS_SECRET}
+logging:
+  pattern:
+    console: "%white([%d{yyyy-MM-dd HH:mm:ss}]) %yellow([%thread]) %highlight([%-5level]) %white([%-35logger{35}]) %white(%msg  %n)"
+  level:
+    root: DEBUG
+    jpa: DEBUG
+    org:
+      springframework:
+        orm:
+          jpa: DEBUG
