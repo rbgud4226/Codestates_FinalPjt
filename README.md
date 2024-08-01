@@ -15,37 +15,21 @@
 > #### 프로젝트 목표
  * 바쁜 현대인들을 위해 내가 원하는 펫시터에게 애완동물의 산책/돌봄 서비스를 제공하는 목적
  * 
-> #### 프로젝트 기간 : 2024.05.24 ~ 2024.06.26 (22 일간)
+> #### 프로젝트 기간 : 2023.08.23 ~ 2023.09.22
 
-> #### 개발 구성원 : `BE/FE` 5명 (각 담당 영역의 BE/FE 작업을 진행)
+> #### 개발 구성원 : `BE 4명/FE 3명`(각 담당 영역의 BE/FE 작업을 진행)
 
 > #### 개발 담당 영역
- * `HRD SYSTEM` 영역
- 
- |이름|담당 영역|
- |:---|:---|
- |최완민(팀장)|`USERS`, `MEMBERS`, `WORK&EDU`|
- |진하경|`WORK_RECORD`|
-
- * `GROUPWARE SYSTEM` 영역
- 
- |이름|담당 영역|
- |:---|:---|
- |백승훈|`DOCX`|
- |정윤석|`MAIL`,`SCHEDULER`|
- |황규형|`CHAT`|
+ * `멤버api, 회원가입,로그인 기능 구현` 백엔드영역
 
 > #### 기술 스택
-
  |영역|기술|
  |:---|:---|
- |Front-end|`html`, `CSS`, `javascript`, `thymeleaf`, `JQuery`|
- |Back-end |`Java`, `Spring Boot`, `JPA`, `maven`, `Spring Security`, `Websocket`, `Spring Batch`, `Scheduler`, `JDBC`, `Lombok`|
- |DB|`Oracle`, `MariaDB` |
- |IDE|`Eclipse`, `Intellij`, `Oracle Sql Developer`|
+ |Back-end |`Java`, `Spring Boot`, `JPA`, `gradle`, `Spring Security`, `Lombok`|
+ |DB|`MySQL`|
+ |IDE|`Intellij`|
  |SCM|`Git&Github`|
- |SEVER|`Ubuntu`|
- |ETC.|`Notion`, `KakaoTalk`, `Linux`, `Oracle VMware`|
+ |ETC.|`Notion`, `KakaoTalk`|
 
 ## 프로젝트 소개
 > #### 관리 시스템 정의
