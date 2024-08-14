@@ -31,9 +31,9 @@
  |SCM|`Git&Github`|
  |ETC.|`Notion`, `KakaoTalk`|
 
-## 프로젝트 소개
-> #### 관리 시스템 정의
-![kosta_final_pjt_ppt_ver_fianl_1](https://github.com/choiwanmin/kosta_final_pjt/assets/111493653/4eea3baf-dee1-4870-a23b-0be259766d20)
+## 담당 영역 화면
+> #### 로그인 화면
+![로그인화면](https://github.com/user-attachments/assets/b59faf05-ab79-417e-acea-1e1600ddae5f)
 
 > #### 협업 시스템 정의
 ![kosta_final_pjt_ppt_ver_fianl_2](https://github.com/choiwanmin/kosta_final_pjt/assets/111493653/1251d3cb-8b0b-4156-887f-bc72f0a11aac)
