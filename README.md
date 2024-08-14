@@ -25,23 +25,18 @@
 > #### 기술 스택
  |영역|기술|
  |:---|:---|
- |Back-end |`Java`, `Spring Boot`, `JPA`, `gradle`, `Spring Security`, `Lombok`|
+ |Back-end |`Java`, `Spring Boot`, `JPA`, `gradle`, `Spring Security`, `Lombok`, `Redis`|
  |DB|`MySQL`|
  |IDE|`Intellij`|
  |SCM|`Git&Github`|
- |ETC.|`Notion`, `KakaoTalk`|
+ |ETC.|`Discord`, `KakaoTalk`|
 
 ## 담당 영역 화면
 > #### 로그인 화면
 ![로그인화면](https://github.com/user-attachments/assets/b59faf05-ab79-417e-acea-1e1600ddae5f)
 
-> #### 협업 시스템 정의
-![kosta_final_pjt_ppt_ver_fianl_2](https://github.com/choiwanmin/kosta_final_pjt/assets/111493653/1251d3cb-8b0b-4156-887f-bc72f0a11aac)
+> #### 회원가입 화면
+![회원가입 화면](https://github.com/user-attachments/assets/4bdc7806-a18c-4415-b426-cdeff8ebde06)
 
-## 상세 기능
-![kosta_final_pjt_ppt_ver_fianl_detail](https://github.com/choiwanmin/kosta_final_pjt/assets/111493653/d0703273-192e-4ec7-a438-5878009a7adc)
-## 프로젝트 ERD
-![kosta_final_pjt_ppt_ver_fianl_erd](https://github.com/choiwanmin/kosta_final_pjt/assets/111493653/e12c9fed-4f67-4b2f-a7a6-3d98bfde1fa7)
-
-## 프로젝트 흐름도
-![kosta_final_pjt_ppt_ver_fianl_flow](https://github.com/choiwanmin/kosta_final_pjt/assets/111493653/ea5a340a-7cc2-4041-86d2-10a8f2ea69bb)
+> #### 마이페이지 화면
+![마이페이지](https://github.com/user-attachments/assets/aff62f04-2291-4892-8963-8b7aaa386c64)
