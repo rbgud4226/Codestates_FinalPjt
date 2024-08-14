@@ -2,10 +2,8 @@
 
 ## 목차
 * [프로젝트 개요](#프로젝트-개요)
-* [프로젝트 소개](#프로젝트-소개)
-* [상세 기능](#상세-기능)
-* [프로젝트 ERD](#프로젝트-ERD)
 * [프로젝트 흐름도](#프로젝트-흐름도)
+* [담당 영역 화면](#담당영역-화면)
 
 ## 프로젝트 개요
 
@@ -33,7 +31,7 @@
 
 ## 프로젝트 흐름도
 > #### 프로젝트 흐름도
-[나머지들Flow.pdf](https://github.com/user-attachments/files/16606804/Flow.pdf)
+![codestate_pettalk_flow](https://github.com/user-attachments/assets/fdc0bb84-7644-4b3d-bc6a-7a0c7e17f1b5)
 
 ## 담당 영역 화면
 > #### 로그인 화면
