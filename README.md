@@ -31,6 +31,10 @@
  |SCM|`Git&Github`|
  |ETC.|`Discord`, `KakaoTalk`|
 
+## 프로젝트 흐름도
+> #### 프로젝트 흐름도
+[나머지들Flow.pdf](https://github.com/user-attachments/files/16606804/Flow.pdf)
+
 ## 담당 영역 화면
 > #### 로그인 화면
 ![로그인화면](https://github.com/user-attachments/assets/b59faf05-ab79-417e-acea-1e1600ddae5f)
