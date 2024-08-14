@@ -3,7 +3,7 @@
 ## 목차
 * [프로젝트 개요](#프로젝트-개요)
 * [프로젝트 흐름도](#프로젝트-흐름도)
-* [담당 영역 화면](#담당영역-화면)
+* [담당영역 화면](#담당영역-화면)
 
 ## 프로젝트 개요
 
@@ -33,7 +33,7 @@
 > #### 프로젝트 흐름도
 ![codestate_pettalk_flow](https://github.com/user-attachments/assets/fdc0bb84-7644-4b3d-bc6a-7a0c7e17f1b5)
 
-## 담당 영역 화면
+## 담당영역 화면
 > #### 로그인 화면
 ![로그인화면](https://github.com/user-attachments/assets/b59faf05-ab79-417e-acea-1e1600ddae5f)
 
